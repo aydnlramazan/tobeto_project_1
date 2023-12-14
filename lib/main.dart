@@ -11,7 +11,18 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginPage(),
+      home: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(6.0),
+          child: Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/background.png"), fit: BoxFit.fill),
+            ),
+            child: LoginPage(),
+          ),
+        ),
+      ),
     );
   }
 }
